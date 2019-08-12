@@ -11,5 +11,9 @@ def home():
 def login():
     return "<h1>Login Page</h1>"
 
+@app.route("/logout")
+def login():
+    return "<h1>Logout Page</h1>"
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0' ,port=80)
