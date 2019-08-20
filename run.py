@@ -12,7 +12,7 @@ def login():
     return "<h1>Login Page</h1>"
 
 @app.route("/logout")
-def login():
+def logout():
     return "<h1>Logout1 Page</h1>"
 
 if __name__ == "__main__":
