@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+            	sh 'docker swarm leave'
                 sh 'docker swarm init'
                 sh 'docker stack deploy -c docker-compose.yml getstartedlab'
             }
