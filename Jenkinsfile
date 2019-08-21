@@ -11,11 +11,6 @@ pipeline {
                 sh 'docker push localhost:5000/flask:version1'
             }
         }
-        stage('Test') {
-            steps {
-                sh 'pytest test_run.py'
-            }
-        }
         stage('Deploy') {
             steps {
                 sh 'docker swarm init'
