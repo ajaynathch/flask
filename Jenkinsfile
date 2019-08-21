@@ -4,12 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build --tag=friendlyhello .'
-                withDockerRegistry([ credentialsId: "YWpheW5hdGhjaDphamF5bmF0aEAzNTI=", url: "" ]) {
-                    sh 'docker tag hello ajaynathch/flask:version2'
-                    sh 'docker push ajaynathch/flask:version2'
-                }
-                
+                sh 'docker build --tag=hellocicd .'
+                sh 'docker image tag hellocicd localhost:5000/flask:version1'
+                sh 'docker push localhost:5000/flask:version1'
             }
         }
         stage('Test') {

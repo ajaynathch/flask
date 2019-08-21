@@ -2,7 +2,7 @@ version: "3"
 services:
   web:
     # replace username/repo:tag with your name and image details
-    image: ajaynathch/flask:version1
+    image: localhost:5000/flask:version1
     deploy:
       replicas: 5
       resources:
