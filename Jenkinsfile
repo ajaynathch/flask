@@ -1,7 +1,7 @@
 pipeline {
     agent any
     triggers {
-        pollSCM('') 
+        pollSCM('* * * * *') 
     }
     stages {
         stage('Build') {
@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+            	sh 'docker stack rm getstartedlab'
             	sh 'docker swarm leave --force'
                 sh 'docker swarm init'
                 sh 'docker stack deploy -c docker-compose.yml getstartedlab'
