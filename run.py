@@ -19,5 +19,9 @@ def logout():
 def log():
     return "<h1>Log Page</h1>"
 
+@app.route("algo")
+def algo():
+	return "</h1>Algo Page</h1>"
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0' ,port=80)
