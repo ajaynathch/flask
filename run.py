@@ -15,9 +15,6 @@ def login():
 def logout():
     return "<h1>Logout1 Page</h1>"
 
-@app.route("/log")
-def log():
-    return "<h1>Log Page</h1>"
 
 @app.route("/algo")
 def algo():
