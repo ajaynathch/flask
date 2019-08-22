@@ -19,7 +19,7 @@ def logout():
 def log():
     return "<h1>Log Page</h1>"
 
-@app.route("algo")
+@app.route("/algo")
 def algo():
 	return "</h1>Algo Page</h1>"
 
