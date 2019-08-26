@@ -16,5 +16,6 @@ EXPOSE 80
 # Define environment variable
 ENV NAME World
 
+RUN pytest
 # Run app.py when the container launches
 CMD ["python", "run.py"]
